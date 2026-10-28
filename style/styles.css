@@ -1,0 +1,12 @@
+*{
+    margin:0;
+}
+form{
+    padding: 20px;
+}
+#divR1{
+    display:inline-block;
+}
+#imgR1{
+    visibility: hidden;
+}

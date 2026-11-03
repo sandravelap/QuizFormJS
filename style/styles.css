@@ -7,6 +7,10 @@ form{
 #divR1{
     display:inline-block;
 }
-#imgR1{
+.imgsRs{
     visibility: hidden;
+}
+#divTrofeo{
+    max-height: 100px;
+    width: auto;
 }

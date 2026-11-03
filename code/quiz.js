@@ -36,21 +36,26 @@ function comprobar() {
 
     //si todas las respuetas son correctas win=true y le doy el trofeo
     if (win==true){
-        //creo el div que va a contener el trofeo
-        let divTrofeo = document.createElement("div");
-        //creo la etiqueta img donde va la imagen del trofeo
-        let imgTrofeo = document.createElement("img");
-        //creo la variable que corresponde a main para luego poder poner el hijo div
-        let mains = document.getElementsByTagName("main");
-        //sólo tengo un main y es el primero del array de mains recuperado
-        let miMain = mains[0];
-        //pongo la ruta del trofeo en el src del elemento img
-        imgTrofeo.src = "assets/trofeo.png";
-        //cologo imgTrofeo en su sitio (hijo del divTrofeo)
-        divTrofeo.appendChild(imgTrofeo);
-        //pongo divTrofeo como hijo de main
-        miMain.appendChild(divTrofeo);
-        divTrofeo.id ="divTrofeo"
+        //PRIMERO compruebo si el div ya existe y si existe no lo creo otra vez
+        let divTrofeoHtml = document.getElementById("divTrofeo");
+        //si la variable tiene contenido es que existe, si no lo tiene continuo
+        if (divTrofeoHtml==null){
+            //creo el div que va a contener el trofeo
+            let divTrofeo = document.createElement("div");
+            //creo la etiqueta img donde va la imagen del trofeo
+            let imgTrofeo = document.createElement("img");
+            //creo la variable que corresponde a main para luego poder poner el hijo div
+            let mains = document.getElementsByTagName("main");
+            //sólo tengo un main y es el primero del array de mains recuperado
+            let miMain = mains[0];
+            //pongo la ruta del trofeo en el src del elemento img
+            imgTrofeo.src = "assets/trofeo.png";
+            //cologo imgTrofeo en su sitio (hijo del divTrofeo)
+            divTrofeo.appendChild(imgTrofeo);
+            //pongo divTrofeo como hijo de main
+            miMain.appendChild(divTrofeo);
+            divTrofeo.id ="divTrofeo"
+        }
     }
 }
 
